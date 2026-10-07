@@ -22,12 +22,32 @@
         </div>
       </div>
 
-      <canvas id="gameCanvas" width="960" height="640" aria-label="Game area"></canvas>
+      <div class="game-layout">
+        <canvas id="gameCanvas" width="960" height="640" aria-label="Game area"></canvas>
+
+        <aside class="side-panel">
+          <div class="panel-block">
+            <h2>Inventario</h2>
+            <ul id="inventoryList"></ul>
+          </div>
+
+          <div class="panel-block">
+            <h2>Equipaggiamento</h2>
+            <ul id="equipmentList"></ul>
+          </div>
+
+          <div class="panel-block">
+            <h2>Missione</h2>
+            <p id="questLog">Riusci a sconfiggere il guardiano del castello e trova il Sigillo del Nord.</p>
+          </div>
+        </aside>
+      </div>
 
       <div class="legend">
         <span>WASD / Frecce</span>
         <span>SPAZIO = attacco</span>
         <span>E = pozione</span>
+        <span>1/2/3 = equipaggia</span>
         <span>Scala = livello successivo</span>
       </div>
     </div>
