@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #120f17;
+  --panel: rgba(21, 17, 28, 0.9);
+  --accent: #f0d77d;
+  --accent-2: #7ad9ff;
+  --danger: #ff6258;
+  --success: #7ae39d;
+  --stone: #bcae8d;
+  --shadow: #08080b;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, #281f35 0%, #17131c 28%, #0c0c10 100%);
+  color: #ebebd7;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.game-shell {
+  width: min(100%, 1040px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: rgba(21, 17, 28, 0.9);
+  padding: 12px 16px;
+  border: 3px solid rgba(240, 215, 125, 0.7);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25), 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.title-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title-panel h1 {
+  margin: 0;
+  letter-spacing: 0.14em;
+  font-size: clamp(1rem, 2vw, 1.8rem);
+  color: var(--accent);
+  text-shadow: 2px 2px 0 #3d2d10;
+}
+
+#areaName {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--accent-2);
+  text-transform: uppercase;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px 18px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: #f2eedd;
+}
+
+.stats strong {
+  color: var(--accent);
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #11131a;
+  border: 4px solid #3e2d17;
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.6), 0 18px 38px rgba(0,0,0,0.45);
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  background: rgba(8, 8, 12, 0.88);
+  border: 2px solid rgba(122, 217, 255, 0.4);
+  padding: 10px 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .hud {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats {
+    justify-content: flex-start;
+  }
+
+  .legend {
+    font-size: 0.7rem;
+    gap: 8px 18px;
+  }
+}
